@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home</title>
+
+    <link rel="stylesheet" type="text/css" href="contact.css" /> 
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <script src="https://kit.fontawesome.com/cb80f46778.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+        $("#header").load("./htmlfiles/header.html"); 
+        $("#footer").load("./htmlfiles/footer.html"); 
+      });
+    </script>
+
+</head>
+<body>
+
+<header id="header"></header>
+
+<section class="home">
+    <div class="home-content">
+       
+            <h1>Unleashing Potential, Achieving Greatness</h1>  
+            <br>
+            <br>
+            <p>Dobu Martial Arts, where passion meets mastery. Unleash your potential and elevate your skills to new heights.
+              <br> Unleash your potential and elevate your skills to new heights.</p>
+              <br>
+            <button><a href="mailto:thunghtike7@gmail.com">Contact Us</a></button>
+         
+  
+        
+    </div>
+  </section>
+<section class="home2">
+  <div class="containerr">
+    <div class="card">
+        
+        <div class="content">
+            <h3> Quality Facilities and Equipment</h3>
+            <hr>
+<p>Experience top-notch training in our state-of-the-art facility, equipped with modern gear, spacious training areas, and specialized apparatus. Dobu Gym ensures you have the best resources to excel in your martial arts journey.</p>
+          </div>
+    </div>
+
+    <div class="card">
+        
+        <div class="content">
+            <h3> Expert Coaching and Guidance
+            </h3>
+            <hr>
+            <p>Our team of highly skilled and dedicated instructors, led by the esteemed Mauricio Gomez, holds various black belts and accreditations. With their expertise, they'll empower you to develop impeccable technique and reach new heights.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        
+        <div class="content">
+            <h3> Nurturing a Supportive Community
+            </h3>
+            <hr>
+            <p>At Dobu Gym, we believe in building a community where everyone supports and motivates each other. Join a like-minded tribe, make lasting friendships, and share the joy of progress together.</p>
+    </div>
+    </div>
+    
+    <div class="card">
+       
+        <div class="content">
+            <h3> Personalized Training Programs
+            </h3>
+            <hr>
+            <p>No matter your skill level or goals, we tailor training programs to suit your needs. Whether you seek self-defense proficiency, fitness enhancement, or competitive excellence, Dobu Gym has the perfect program for you.</p>
+        </div>
+    </div>
+</div>
+
+        
+    </div>
+</section>
+<section class="accordion-container">
+    <h2> Frequently Asked Questions </h2>
+    <br>
+<p> Simplifying Your Queries, Empowering You with Answers!</p>
+<br>
+<button class="accordion">Can I attend classes on a flexible schedule?</button>
+<div class="panel">
+      <br>
+    <p>Our class timetables are designed to accommodate various schedules, offering morning and evening classes for your convenience.</p>
+      <br>
+</div>
+
+<button class="accordion">How can I join Dobu Martial Arts?
+</button>
+<div class="panel">
+    <br>
+  <p>You can easily join by contacting us through our website or visiting our gym during business hours. We offer trial classes to help you get started.</p>
+    <br>
+</div>
+
+<button class="accordion">Do you provide private coaching sessions?</button>
+<div class="panel">
+      <br>
+    <p>Yes, we offer personalized one-on-one coaching sessions for those seeking individualized instruction and accelerated progress.</p>
+      <br>
+</div>
+
+<button class="accordion">Can beginners join Dobu Martial Arts?</button>
+<div class="panel">
+      <br>
+    <p>Absolutely! Our programs cater to individuals of all skill levels, from beginners to advanced practitioners.</p>
+      <br>
+</div>
+
+</section>
+
+<section class="newletters">
+    <div class="news-content">
+        <h1>Subscribe&StayTuned</h1>  
+        <br>
+        <p>Subscribe to Our Newsletter for Exclusive Updates and Special Offers!"</p>
+    </div>
+    <div class="news-bottom">
+        <input type="text" placeholder="Your Email">
+        <button> Submit</button>
+    </div>
+</section>
+
+<section class="address" id="tt">
+<div class="map">
+    <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe " frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=LA&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://formatjson.org/">format json</a></div><style>.mapouter{position:relative;text-align:right;width:600px;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:600px;height:400px;}.gmap_iframe {width:600px!important;height:400px!important;border-radius: 50px;border-color: black;}</style></div>
+</div>
+<div class="info">
+<h2>Contact Info</h2>
+        <p>Main Location: 62 Main St LA</p>
+        <p class="hot-line">Hot-Line Number: 545-986-003</p>
+        <p class="customer-service">Customer-service: inabox247@gmail.com</p>
+        <p class="connect-manager">Connect with manager: inabox12m@gmail.com</p>
+        <p class="assistant-number">Assistant Number: 545-986-007 / 545-986-008</p>
+</div>
+</section>
+
+  
+
+
+
+
+<footer id="footer"></footer>
+
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+    
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+</body>
+</html>

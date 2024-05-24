@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Registerform</title>
+
+    <link rel="stylesheet" type="text/css" href="register.css" /> 
+
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+    <script src="https://kit.fontawesome.com/cb80f46778.js" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () { 
+        $("#header").load("./htmlfiles/header.html"); 
+        $("#footer").load("./htmlfiles/footer.html"); 
+      });
+    </script>
+
+</head>
+<body>
+
+<header id="header"></header>
+
+<section class="content">
+  <h1>DoBu Martial Arts Registration Form</h1>
+  <form id="registrationForm">
+    <div>
+    <label for="name">Name:</label>
+    <br>
+    <input type="text" id="name" required>
+  </div>
+  <div>
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" required>
+  </div>
+  <div>
+    <label for="phone">Phone Number:</label><br>
+    <input type="tel" id="phone" required>
+  </div>
+ 
+<div>
+  <label for="gender">Gender:</label><br>
+  <select id="gender" name="gender">
+    <option value="male">Male</option>
+    <option value="female">Female</option>
+  </select>
+</div>
+  
+  <div>
+    <label for="address">Address:</label><br>
+    <input type="text" id="address" required>
+  </div>
+  <div>
+    <label for="membership">Membership:</label><br>
+    <select id="membership">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advance">Advance</option>
+      <option value="elite">Elite</option>
+      <option value="junior">Junior Mebership</option>
+    </select>
+  </div>
+  
+  <br>
+  <div>
+    <!-- Add other input fields for additional data -->
+
+    <button type="submit">Register</button>
+    <button type="cancel">Cancel</button>
+  </div>
+  </form>
+</section>
+
+
+
+
+<footer id="footer"></footer>
+
+
+<script src="register.js"></script>
+
+</body>
+</html>
