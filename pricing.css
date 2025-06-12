@@ -169,7 +169,7 @@ input[type="text"]:focus::placeholder {
 
 .container{
     position:relative;
-    width:1000px;
+    max-width:1000px;
     display:flex;
     align-items: center;
     justify-content: space-between;
@@ -273,4 +273,54 @@ input[type="text"]:focus::placeholder {
 
 }
 
+@media (max-width: 1200px) {
+    .home-content h1 {
+        font-size: 55px; 
+    }
+    .home-content p {
+        font-size: 13px; 
+    }
+    .cards .container .card{
+        max-width: 250px;
+    }
+   
+}
 
+@media (max-width: 900px) {
+    .home-content h1 {
+        font-size: 45px; 
+    }
+    .home-content p {
+        font-size: 11px; 
+    }
+    .search-container {
+        width: 60%;
+    }
+    .cards2 .container .card{
+        max-width: 240px;
+    }
+    .cards2 h2 {
+       font-size: 1.2rem;
+    }
+ 
+}
+
+@media (max-width: 600px) {
+    .home-content h1 {
+        font-size: 35px; 
+    }
+    .home-content p {
+        font-size: 10px; 
+    }
+    .search-container {
+        width: 90%;
+    }
+    .cards .container .card{
+        max-width: 300px;
+        margin:2rem auto;
+    }
+    .cards2 .container .card{
+        max-width: 300px;
+        margin:2rem auto;
+    }
+}

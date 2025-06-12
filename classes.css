@@ -44,6 +44,7 @@ body{
     background-size: cover;
     background-position: center; 
     height: 100vh;
+    width: 100%;
     display: flex;
     align-items: center; 
     font-family: Arial, sans-serif;
@@ -71,6 +72,9 @@ body{
 .card h2{
    text-align: center;
 
+}
+.card p {
+  text-align: justify;
 }
 
 .card hr{
@@ -130,6 +134,9 @@ body{
     font-size: 36px;
     color: orange;
     text-align: left;
+}
+.instructors p {
+  text-align: justify;
 }
 
 .classes hr{
@@ -191,3 +198,121 @@ table {
   strong {
     font-weight: bold;
   }
+
+  @media (max-width: 1250px) {
+    .card h2 {
+      font-size: 1.2rem;
+  }
+  .card p {
+    font-size: 15px;
+  }
+  .instructors .image {
+    margin: 0 80px;
+}
+  .instructors h1 {
+    font-size: 30px;
+}
+
+  }
+  
+  @media (max-width: 1000px) {
+    .card h2 {
+      font-size: 1rem;
+  }
+  .card p {
+    font-size: 13px;
+  }
+  .instructors .image {
+    margin: 0 50px;
+}
+  .instructors h1 {
+    font-size: 25px;
+}
+.instructors p {
+  font-size: 13px;
+}
+  }
+  @media (max-width: 800px) {
+    .home {
+  
+      height: 80vh;
+      width: 100%;
+      
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 2rem;
+      align-items: center;
+      margin: auto;
+    }
+    .card {
+      width: 70%;
+      height: 200px;
+      margin: auto;
+    }
+    .instructors .image {
+      margin: 0 40px;
+  }
+    .instructors h1 {
+      font-size: 20px;
+  }
+  .instructors p {
+    font-size: 11px;
+  }
+  .instructors .content1 {
+    margin: 0 40px;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-size: 10px;
+}
+tbody tr td:first-child{
+  font-size: 10px;
+}
+  }
+  @media (max-width: 600px) {
+    .home {
+  
+      height: 60vh;
+      width: 100%;
+      
+    }
+   
+    .card {
+      width: 80%;
+      height: 160px;
+    }
+    .card h2 {
+      font-size: 0.8rem;
+    }
+    .card p {
+      font-size: 10px;
+      padding: 0 5px;
+    }
+    .instructors .image {
+      margin: 0 10px;
+  }
+    .instructors h1 {
+      font-size: 16px;
+  }
+  .instructors p {
+    font-size: 9px;
+  }
+  .instructors .content1 {
+    margin: 0 10px;
+}
+table {
+  width: 100%;
+  max-width:600px;
+}
+th, td {
+  padding: 5px;
+  text-align: center;
+  font-size: 8px;
+}
+tbody tr td:first-child{
+  font-size: 8px;
+}
+}

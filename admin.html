@@ -196,13 +196,25 @@ legend{
   color: rgb(0, 0, 0);
 }
 
+.table td .tdbtn{
+  display: flex;
+}
 
+.table td .tdbtnupdate{
+  display: flex;
+  flex-direction: row;
+}
 
 
 button{
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 10px;
-  margin: 0 20px;
+  margin: 0 10px;
+}
+.updatebtn{
+    padding: 5px 0px;
+    border-radius: 10px;
+    margin: 0 5px;
 }
 
 i{
@@ -280,8 +292,8 @@ select {
     return false;
   }
 
-  // Check if the input has exactly 9 digits
-  if (phone.length !== 9) {
+  // Check if the input has exactly 11 digits
+  if (phone.length !== 11) {
     return false;
   }
 
@@ -346,9 +358,11 @@ select {
             "<td class='td-data'>" + item.address + "</td>" +
             "<td class='td-data'>" + item.membership + "</td>" +
             "<td class='td-data'>" +
-            "<button id='" + btnEditId + "' class='btn btn-info btn-xs btn-editcustomer' onclick='showEditRow(" + item.id + ")'><i class='fa fa-pencil' aria-hidden='true'></i> EDIT</button>" +
-            " "+
-            "<button id='" + btnDeleteId + "' class='btn btn-danger btn-xs btn-deleteCustomer' onclick='deleteRow(" + item.id + ")'><i class='fa fa-trash' aria-hidden='true'> DELETE</button>" +
+              "<div class='tdbtn'>"+
+                "<button id='" + btnEditId + "' class='btn btn-info btn-xs btn-editcustomer' onclick='showEditRow(" + item.id + ")'><i class='fa fa-pencil' aria-hidden='true'></i> </button>" +
+                " "+
+                "<button id='" + btnDeleteId + "' class='btn btn-danger btn-xs btn-deleteCustomer' onclick='deleteRow(" + item.id + ")'><i class='fa fa-trash' aria-hidden='true'> </button>" +
+              "</div>"
             "</td>" +
             "</tr>";
           document.getElementById('tbody').innerHTML += tableRow;
@@ -460,12 +474,15 @@ select {
       trdata[5].innerHTML = '<input name="txtaddress" id="txtaddress" value="' + userAddress + '"/>';
       trdata[6].innerHTML = '<input name="txtmembership" id="txtmembership" value="' + usermembership + '"/>';
 
-      trdata[7].innerHTML =
-        "<button class='btn btn-primary btn-xs btn-updateCustomer' onclick='updateUser(" + userID + ")'>" +
-        "<i class='fa fa-pencil' aria-hidden='true'></i>Update</button>" +
-        "<button class='btn btn-warning btn-xs btn-cancelupdate' onclick='cancel(" + userID + ")'><i class='fa fa-times' aria-hidden='true'></i>Cancel</button>" +
-        "<button class='btn btn-danger btn-xs btn-deleteCustomer' onclick='deleteUser(" + userID + ")'>" +
-        "<i class='fa fa-trash' aria-hidden='true'></i>Delete</button>";
+      trdata[7].innerHTML = 
+      "<div class='tdbtnupdate'>"+
+        "<button class='btn btn-primary btn-xs btn-updateCustomer updatebtn' onclick='updateUser(" + userID + ")'>" +
+        "<i class='fa fa-pencil' aria-hidden='true'></i></button>" +
+        "<button class='btn btn-warning btn-xs btn-cancelupdate updatebtn' onclick='cancel(" + userID + ")'><i class='fa fa-times' aria-hidden='true'></i></button>" +
+        "<button class='btn btn-danger btn-xs btn-deleteCustomer updatebtn' onclick='deleteUser(" + userID + ")'>" +
+        "<i class='fa fa-trash' aria-hidden='true'></i></button>"+
+      "</div>"
+
     }
 
     function cancel(UserID) {
@@ -489,8 +506,10 @@ select {
       data[4].innerHTML = gender;
       data[5].innerHTML = address;
       data[6].innerHTML = membership;
-      var actionbtn = "<button id='" + btneditId + "' class='btn btn-info btn-xs btn-editcustomer' onclick='showEditRow(" + UserID + ")'><i class='fa fa-pencil' aria-hidden='true'></i>Edit</button>" +
-        "<button id='" + btndeleteId + "' class='btn btn-danger btn-xs btn-deleteCustomer' onclick='deleteRow(" + UserID + ")'><i class='fa fa-trash' aria-hidden='true'>Delete</button>";
+      var actionbtn =  "<div class='tdbtn'>"+
+        "<button id='" + btneditId + "' class='btn btn-info btn-xs btn-editcustomer' onclick='showEditRow(" + UserID + ")'><i class='fa fa-pencil' aria-hidden='true'></i></button>" +
+        "<button id='" + btndeleteId + "' class='btn btn-danger btn-xs btn-deleteCustomer' onclick='deleteRow(" + UserID + ")'><i class='fa fa-trash' aria-hidden='true'></button>"+
+          "</div>"
       data[7].innerHTML = actionbtn;
     }
 

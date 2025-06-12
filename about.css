@@ -197,3 +197,58 @@ background-color: #fbdc38;
 
 width: 230px;    margin: 0 auto;
  }
+
+ @media (max-width: 900px) {
+    .home-content h1 {
+        font-size: 50px;
+        letter-spacing: 1px;
+    }
+    .home-content p {
+        font-size: 10px;
+    }
+    .instructors .image {
+        margin: 0 40px;
+    }
+    .instructors .content1 {
+        flex: 1;
+        max-width: 40%;
+        margin: 0 40px;
+    }
+    .instructors h1 {
+        font-size: 30px;
+    }
+    .instructors p {
+        font-size: 10px;
+    }
+    .container .card {
+       margin: auto;
+    }
+ }
+
+ @media (max-width: 600px) {
+    .home-content h1 {
+        font-size: 35px;
+        letter-spacing: 1px;
+    }
+    .home-content p {
+        font-size: 9px;
+    }
+    .instructors .image {
+        margin: 0 20px;
+    }
+    .instructors .content1 {
+        flex: 1;
+        max-width: 40%;
+        margin: 0 20px;
+    }
+    .instructors h1 {
+        font-size: 20px;
+    }
+    .instructors p {
+        font-size: 9px;
+    }
+    .container .card {
+       margin: auto;
+    }
+
+ }

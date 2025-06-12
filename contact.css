@@ -39,15 +39,14 @@ body{
 
 
 .home {
-background-color: #fff;
+    background-color: #fff;
+    padding: 5rem 8%;
     height: 60vh;
     display: flex;
     align-items: center; 
     font-family: Arial, sans-serif;
     color: #fbdc38; 
-    margin: 2% auto;
-    margin-bottom: 0%;
-    padding: 2% 8%;
+    /* margin: 10% auto 0; */
 }
 
 /* Style the overlay text container */
@@ -99,9 +98,7 @@ background-color: #fff;
 
 
 .home2 {
-  
-    height: 60vh;
-    display: flex;
+    padding: 3rem 0;
     align-items: center; 
     font-family: Arial, sans-serif;
     background-color: #fff;
@@ -109,8 +106,10 @@ background-color: #fff;
 }
 
 .containerr{
-    padding: 8%;
-    display: flex;
+    padding: 0 8%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
     justify-content: space-between;
 }
 
@@ -230,14 +229,19 @@ background-color: #fff;
     padding: 2% 16%;
     background-color: #000;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 
 }
-.map{
+#mapcontrol {
     flex: 1;
+    max-width: 600px;
+    height: 400px;
 }
-
+#mapcontrol .gmap_canvas{
+    width: 100%;
+}
 
 .info {
     max-width: 400px;
@@ -265,3 +269,82 @@ background-color: #fff;
     font-size: 16px;
 }
 
+@media (max-width: 900px) {
+    .home-content h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .home-content p {
+        font-size: 10px;
+    }
+    .containerr{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        
+    }
+    .card {
+        min-width: 200px;
+        max-width: 250px;
+        height: 180px;
+        margin: auto;
+        padding: 5px;
+    }
+    .card h3 {
+        font-size: 16px;
+    }
+    .card p {
+        font-size: 10px;
+    } 
+}
+
+@media (max-width: 600px) {
+    .home-content h1 {
+        font-size: 30px;
+        letter-spacing: 1px;
+    }
+    .home-content p {
+        font-size: 10px;
+    }
+    .containerr{
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+        
+    }
+    .card {
+        min-width: 130px;
+        max-width: 200px;
+        height: 200px;
+        margin: auto;
+    }
+    .card h3 {
+        font-size: 14px;
+    }
+    .card p {
+        font-size: 10px;
+    }
+    .newletters {
+        display: flex;
+        flex-direction: column;
+    }
+    .news-bottom {
+        margin: auto;
+    }
+    #mapcontrol {
+        flex: 1;
+        max-width: 350px;
+        height: 250px;
+    }
+    #mapcontrol .mapouter {
+        
+        width: 350px;
+        height: 250px;
+    }
+    #mapcontrol .gmap_canvas{
+        width: 350px;
+    }
+    #mapcontrol .gmap_iframe {
+        width: 350px !important;
+        height: 250px !important;
+    }
+  
+}

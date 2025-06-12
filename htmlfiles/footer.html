@@ -37,7 +37,8 @@ body{
 .part1{
     padding:  0 8%;
     background: rgb(255, 255, 255);
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     justify-content: space-between;
   
@@ -54,7 +55,7 @@ body{
 }
 
 .part1 .logo{
-    flex: 1;
+    width: 80%;
     text-align: center;
           
 }
@@ -62,8 +63,8 @@ body{
 .part1 .logo div{
     display: flex;
     justify-content: space-between;
-    width: 10rem;
-   margin-left:14rem;
+    width: 80%;
+ 
 }
 
 .part1 .logo div a{
@@ -93,7 +94,7 @@ body{
 
 .footer .part1 .sitemap{
     padding: 4% 0;
-    max-width: 50%;
+    /* max-width: 50%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -108,18 +109,49 @@ body{
     color: rgba(41, 26, 4, 0.618);
 }
 
-.sitemap  p a{
+.sitemap  a{
     text-decoration: none;
     line-height: 1.5;
     color :black
 }
 
-.sitemap  p a:hover{  
+.sitemap  a:hover{  
     color :#F99B36;
 }
 
 .link{
-    margin-left: 200px;
+    margin: auto;
+}
+.footer-a{
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 750px){
+    .part1{
+    display: grid;
+    grid-template-columns: repeat(1,2fr);
+}
+.part1 .logo {
+    width: 100%;
+}
+.part1 .logo div {
+    width: 50%;
+}
+.footer .part1 .sitemap{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    max-width: 100%;
+}
+.part2{
+  
+    font-size: 10px;
+   
+  
+}
+/* .footer .part1 .sitemap div p{
+    display: none;
+} */
+
 }
 </style>
 
@@ -150,11 +182,14 @@ body{
 
         <a href=""><h4>Classes</h4></a>
         <br>
-        <p><a href="classes.html">Jiu-Jitsu</a></p>
-        <p><a href="classes.html">Judo</a></p>
-        <p><a href="classes.html">Karete</a></p>
-        <p><a href="classes.html">Muay Thai</a></p>
-        <p><a href="classes.html">Fitness Training</a></p>
+        <div class="footer-a">
+            <a href="classes.html">Jiu-Jitsu</a>
+            <a href="classes.html">Judo</a>
+            <a href="classes.html">Karete</a>
+            <a href="classes.html">Muay Thai</a>
+            <a href="classes.html">Fitness Training</a>
+        </div>
+       
        </div>
 
        <div><p>|</p></div>
@@ -162,11 +197,13 @@ body{
        <div class="membership">
         <a href=""><h4>Membership</h4></a>
         <br>
-        <p><a href="pricing.html">Beginner</a></p>
-        <p><a href="pricing.html">Elite</a></p>
-        <p><a href="pricing.html">Intermediate</a></p>
-        <p><a href="pricing.html">Advance</a></p>
-        <p><a href="pricing.html">Junior membership</a></p>
+        <div class="footer-a">
+            <a href="pricing.html">Beginner</a>
+            <a href="pricing.html">Elite</a>
+            <a href="pricing.html">Intermediate</a>
+            <a href="pricing.html">Advance</a>
+            <a href="pricing.html">Junior membership</a>
+        </div>
        </div>
     
        <div><p>|</p></div>
@@ -174,12 +211,13 @@ body{
        <div class="contact">
         <a href=""><h4>About</h4></a>
         <br>
-        <p><a href="pricing.html">Private Coaching</a></p>
-        <p><a href="facilities">Gym Facilities</a></p>
-        <p><a href="about.html">Instructors</a></p>
-        <p><a href="about.html">About</a></p>
-        <p><a href="contact.html">Contact</a></p>
-        
+        <div class="footer-a">
+            <a href="pricing.html">Private Coaching</a>
+            <a href="facilities">Gym Facilities</a>
+            <a href="about.html">Instructors</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>        
        </div>
 
        <div><p>|</p></div>
@@ -187,12 +225,12 @@ body{
        <div class="privacy">
         <a href=""><h4>Resources</h4></a>
         <br>
-        <p><a href="privacy.html">Privacy Policy</a></p>
-        <p><a href="terms.html">Terms & Conditions</a></p>
-        <p><a href="contact.html">FAQs</a></p>
-        <p><a href="mailto: htikesanwinnworld243@gmail.com">Customer Support</a></p>
-        <p><a href="profile.html">Profile</a></p>
-       
+        <div class="footer-a">
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms & Conditions</a>
+            <a href="contact.html">FAQs</a>
+            <a href="mailto: htikesanwinnworld243@gmail.com">Customer Support</a>
+            <a href="profile.html">Profile</a>
        </div>
 
      </div>
@@ -201,7 +239,7 @@ body{
 
 
     <section class="part2">
-        <div><p>&#169; 2023 | DOBU Martial Arts .All rights reserved. </p></div>
+        <div><p>&#169; 2024 | DOBU Martial Arts .All rights reserved. </p></div>
 
         <div><p style="color: #000;"> <a href="sitemap.html"> | Sitemap</a></p></div>
 
